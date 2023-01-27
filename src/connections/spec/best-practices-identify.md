@@ -58,13 +58,11 @@ You can see in this full page event, the `anonymousId` is populated, and the `us
 
 The user signs up for an email newsletter and fills out the form giving you their first and last name, as well as their email address. At this point, you will fire off an `identify` call. You won't yet assign them a user ID in this example, but you can still grab these traits about them.
 
-<script type="text/JavaScript">
+<script type="text/javascript">
     function showMessage(){
-        var phone = document.getElementById("phone").value;
         var email = document.getElementById("email").value;
         var fname = document.getElementById("fname").value;
         var lname = document.getElementById("lname").value;
-        display_phone.innerHTML= phone;
         display_email.innerHTML= email;
         display_fname.innerHTML= fname;
         display_lname.innerHTML= lname;
@@ -76,29 +74,24 @@ The user signs up for an email newsletter and fills out the form giving you thei
   <input type="text" id="fname"><br>
   <label for="lname">Last Name:</label>
   <input type="text" id="lname"><br>
-  <label for="phone">Phone:</label>
-  <input type="text" id="phone"><br>
   <label for="email">Email:</label>
   <input type="text" id="email"><br>
-  <input type="submit" onclick="showMessage()" value="submit" />
+  <input type="submit" onclick="showMessage()" value="Submit" />
 </div>
 
 <p>The result of your identify call might look something like this:</p>
 
 <div class="output">
-<p>analytics.identify ('userId' {</p>
-<p>phone: '<span id = "display_phone"></span>',</p>
+<p>analytics.identify ({</p>
+<p>firstName: '<span id = "display_fname"></span>',</p>
+<p>lastName: '<span id = "display_lname"></span>',</p>
 <p>email: '<span id = "display_email"></span>',</p>
-<p>name: { </p>
-<p>&nbsp;&nbsp;first name: '<span id = "display_fname"></span>',</p>
-<p>&nbsp;&nbsp;last name: '<span id = "display_lname"></span>',</p>
-<p>}</p>
-<p>)}</p>
+<p>});</p>
 </div>
 
-![Fire Identify Call](https://user-images.githubusercontent.com/78389005/214353033-e90b6e7f-f593-416e-9f13-44848fab595a.png)
+<!---[Fire Identify Call](https://user-images.githubusercontent.com/78389005/214353033-e90b6e7f-f593-416e-9f13-44848fab595a.png)--->
 
-You'll notice the identify call contains no `userId`. These traits will be associated to the `anonymousId` that is available in the user's cookie and `localStroage`. 
+You'll notice the identify call contains no `userId`. These traits will be associated to the `anonymousId` that is available in the user's cookie and `localStorage`. 
 
 ![No UserId in Payload](https://user-images.githubusercontent.com/78389005/214353985-599e7456-9295-4cb3-b97c-b30a9b905fcf.png)
 
