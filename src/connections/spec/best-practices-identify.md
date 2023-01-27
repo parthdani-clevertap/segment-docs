@@ -92,7 +92,7 @@ The user signs up for an email newsletter and fills out the form giving you thei
   </div>
 </div>
 
-<!---[Fire Identify Call](https://user-images.githubusercontent.com/78389005/214353033-e90b6e7f-f593-416e-9f13-44848fab595a.png)--->
+[Fire Identify Call](https://user-images.githubusercontent.com/78389005/214353033-e90b6e7f-f593-416e-9f13-44848fab595a.png)
 
 You'll notice the identify call contains no `userId`. These traits will be associated to the `anonymousId` that is available in the user's cookie and `localStorage`. 
 
