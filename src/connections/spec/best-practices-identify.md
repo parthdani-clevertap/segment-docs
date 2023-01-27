@@ -82,7 +82,7 @@ The user signs up for an email newsletter and fills out the form giving you thei
 <p>The result of your identify call might look something like this:</p>
 
 <div class="output">
-<p>analytics.identify ({</p>
+<p>analytics.identify({</p>
 <p>firstName: '<span id = "display_fname"></span>',</p>
 <p>lastName: '<span id = "display_lname"></span>',</p>
 <p>email: '<span id = "display_email"></span>',</p>
