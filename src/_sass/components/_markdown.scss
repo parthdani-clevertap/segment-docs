@@ -475,3 +475,19 @@ div.highlighter-rouge {
   font-weight: bold;
   margin-left: 3px
 }
+
+.sample-code-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.output {
+  outline: 1px solid color(gray-600);
+  outline-offset: 4px
+}
+
+.form {
+  outline: 1px solid color(gray-600);
+  outline-offset: 4px
+}

@@ -69,24 +69,27 @@ The user signs up for an email newsletter and fills out the form giving you thei
     }
 </script>
 
-<div class="form">
-  <label for="fname">First Name:</label>
-  <input type="text" id="fname"><br>
-  <label for="lname">Last Name:</label>
-  <input type="text" id="lname"><br>
-  <label for="email">Email:</label>
-  <input type="text" id="email"><br>
-  <input type="submit" onclick="showMessage()" value="Submit" />
-</div>
+<div class="sample-code-container">
+  <div class="form">
+    <h3> Web Form </h3>
+    <p><b>Newsletter Signup</b></p>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname"><br>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname"><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email"><br>
+    <input type="submit" onclick="showMessage()" value="Submit"/>
+  </div>
 
-<p>The result of your identify call might look something like this:</p>
-
-<div class="output">
-<p>analytics.identify({</p>
-<p>firstName: '<span id = "display_fname"></span>',</p>
-<p>lastName: '<span id = "display_lname"></span>',</p>
-<p>email: '<span id = "display_email"></span>',</p>
-<p>});</p>
+  <div class="output">
+  <h3>Sample Identify Call </h3>
+  <p>analytics.identify({</p>
+  <p>firstName: '<span id = "display_fname"></span>',</p>
+  <p>lastName: '<span id = "display_lname"></span>',</p>
+  <p>email: '<span id = "display_email"></span>',</p>
+  <p>});</p>
+  </div>
 </div>
 
 <!---[Fire Identify Call](https://user-images.githubusercontent.com/78389005/214353033-e90b6e7f-f593-416e-9f13-44848fab595a.png)--->
