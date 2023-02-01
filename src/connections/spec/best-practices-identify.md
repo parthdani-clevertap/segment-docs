@@ -82,17 +82,21 @@ The user signs up for an email newsletter and fills out the form giving you thei
     <input type="submit" onclick="showMessage()" value="Submit"/>
   </div>
 
-  <div class="output">
-  <h3>Sample Identify Call </h3>
-  <p>analytics.identify({</p>
-  <p>firstName: '<span id = "display_fname"></span>',</p>
-  <p>lastName: '<span id = "display_lname"></span>',</p>
-  <p>email: '<span id = "display_email"></span>',</p>
-  <p>});</p>
-  </div>
+<div class="output">
+<h3>Sample Identify Call </h3>
+<div class="output-code">
+<pre><samp aria-label='Code Sample'>
+<p>analytics.identify({<br>
+firstName: '<span id = "display_fname"></span>',<br>
+lastName: '<span id = "display_lname"></span>',<br>
+email: '<span id = "display_email"></span>',<br>
+});</p>
+</samp></pre>
+</div>
+</div>
 </div>
 
-[Fire Identify Call](https://user-images.githubusercontent.com/78389005/214353033-e90b6e7f-f593-416e-9f13-44848fab595a.png)
+![Fire Identify Call](https://user-images.githubusercontent.com/78389005/214353033-e90b6e7f-f593-416e-9f13-44848fab595a.png)
 
 You'll notice the identify call contains no `userId`. These traits will be associated to the `anonymousId` that is available in the user's cookie and `localStorage`. 
 
