@@ -68,6 +68,12 @@ The user signs up for an email newsletter and fills out the form giving you thei
         display_lname.innerHTML= lname;
     }
 </script>
+<script>
+  function showOutput() {
+    var show = document.getElementById("code-output");
+    show.style.display = "run-in";
+}
+</script>
 
 <div class="sample-code-container">
   <div class="form">
@@ -85,7 +91,7 @@ The user signs up for an email newsletter and fills out the form giving you thei
 <div class="output">
 <h3>Sample Identify Call </h3>
 <div class="output-code">
-<pre><samp aria-label='Code Sample'>
+<pre><samp>
 <p>analytics.identify({<br>
 firstName: '<span id = "display_fname"></span>',<br>
 lastName: '<span id = "display_lname"></span>',<br>
