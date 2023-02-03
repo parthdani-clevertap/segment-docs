@@ -59,38 +59,42 @@ You can see in this full page event, the `anonymousId` is populated, and the `us
 The user signs up for an email newsletter and fills out the form giving you their first and last name, as well as their email address. At this point, you will fire off an `identify` call. You won't yet assign them a user ID in this example, but you can still grab these traits about them.
 
 <script type="text/javascript">
-    function showMessage(){
-        var email = document.getElementById("email").value;
-        var fname = document.getElementById("fname").value;
-        var lname = document.getElementById("lname").value;
-        display_email.innerHTML= email;
-        display_fname.innerHTML= fname;
-        display_lname.innerHTML= lname;
-    }
+  function showMessage(){
+      var email = document.getElementById("email").value;
+      var fname = document.getElementById("fname").value;
+      var lname = document.getElementById("lname").value;
+      display_email.innerHTML= email;
+      display_fname.innerHTML= fname;
+      display_lname.innerHTML= lname;
+  }
 </script>
 <script>
   function showOutput() {
-    var show = document.getElementById("code-output");
-    show.style.display = "run-in";
-}
+    var show = document.getElementById("output-code");
+    if (show.style.display === "block") {
+      show.style.display = "none";
+    } else {
+      show.style.display = "block";
+    }
+  }
 </script>
-
+  
 <div class="sample-code-container">
-  <div class="form">
-    <h3> Web Form </h3>
-    <p><b>Newsletter Signup</b></p>
-    <label for="fname">First Name:</label>
-    <input type="text" id="fname"><br>
-    <label for="lname">Last Name:</label>
-    <input type="text" id="lname"><br>
-    <label for="email">Email:</label>
-    <input type="text" id="email"><br>
-    <input type="submit" onclick="showMessage()" value="Submit"/>
-  </div>
+<div class="form">
+  <h3> Web Form </h3>
+  <p><b>Newsletter Signup</b></p>
+  <label for="fname">First Name:</label>
+  <input type="text" id="fname"><br>
+  <label for="lname">Last Name:</label>
+  <input type="text" id="lname"><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email"><br>
+  <input type="submit" id="submit" onclick="showMessage(); showOutput()" value="Submit">
+</div>
 
 <div class="output">
 <h3>Sample Identify Call </h3>
-<div class="output-code">
+<div class="output-code" id="output-code" style="display:none">
 <pre><samp>
 <p>analytics.identify({<br>
 firstName: '<span id = "display_fname"></span>',<br>
