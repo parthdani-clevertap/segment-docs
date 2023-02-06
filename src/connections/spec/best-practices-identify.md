@@ -93,11 +93,11 @@ The user signs up for an email newsletter and fills out the form giving you thei
 </div>
 
 <div class="output">
-<h3>Sample Identify Call </h3>
+<h3>Sample Identify Call</h3>
 <div class="output-code" id="output-code" style="display:none">
 <pre class="highlight"><samp>
 <p>analytics.identify({
-firstName: '<span class="s2" id="display_fname"></span>',
+firstName: '<span class="st2" id="display_fname"></span>',
 lastName: '<span class="s2" id="display_lname"></span>',
 email: '<span class="s2" id="display_email"></span>'
 });</p>
