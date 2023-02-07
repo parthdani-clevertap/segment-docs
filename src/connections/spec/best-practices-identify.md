@@ -57,15 +57,20 @@ You can see in this full page event, the `anonymousId` is populated, and the `us
 ![Full Page Payload](https://user-images.githubusercontent.com/78389005/214352920-cd7ac161-8e54-4de0-a522-35e6ed8a6e03.png)
 
 The user signs up for an email newsletter and fills out the form giving you their first and last name, as well as their email address. At this point, you will fire off an `identify` call. You won't yet assign them a user ID in this example, but you can still grab these traits about them.
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.css" integrity="sha512-EaMmVtm5YHQNg4u9UXGOueWP6nyUtCpKZojcE4Rqt/6ifpzzzuQVMTffvo8FVj4xDG04gIyWm1z1b7GqELl1eQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script type="text/javascript">
   function showMessage(){
       var email = document.getElementById("email").value;
       var fname = document.getElementById("fname").value;
       var lname = document.getElementById("lname").value;
-      display_email.innerHTML= email;
-      display_fname.innerHTML= fname;
-      display_lname.innerHTML= lname;
+      var output = `analytics.identify({
+  firstName: '${fname}',
+  lastName: '${lname}',
+  email: '${email}'
+}) `
+    output_container.innerHTML = output
+    Prism.highlightElement(output_container)
   }
 </script>
 <script>
@@ -94,15 +99,11 @@ The user signs up for an email newsletter and fills out the form giving you thei
 
 <div class="output">
 <h3>Sample Identify Call</h3>
-<div class="output-code" id="output-code" style="display:none">
-<pre class="highlight"><samp>
-<p>analytics.identify({
-firstName: '<span class="s2" id="display_fname"></span>',
-lastName: '<span class="s2" id="display_lname"></span>',
-email: '<span class="s2" id="display_email"></span>'
-});</p>
-</samp></pre>
-</div>
+<!-- <div class="output-code" id="output-code" style="display:none"> -->
+<pre class="language-javascript"><code class="language-javascript" id="output_container">
+
+</code></pre>
+<!-- </div> -->
 </div>
 </div>
 
