@@ -1811,10 +1811,10 @@ items:
   - id: 63e42e512566ad7c7ca6ba9b
     display_name: Pinterest Conversions API
     name: Pinterest Conversions API
-    slug: pinterest-conversions-api
+    slug: actions-pinterest-conversions-api
     previous_names:
       - Pinterest Conversions API
-    url: connections/destinations/catalog/pinterest-conversions-api
+    url: connections/destinations/catalog/actions-pinterest-conversions-api
     website: http://www.segment.com
     status: PRIVATE_BETA
     logo:
