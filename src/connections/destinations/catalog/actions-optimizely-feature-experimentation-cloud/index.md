@@ -4,20 +4,21 @@ id: 641d5acea88fa531b9068608
 hide-personas-partial: true
 hide-boilerplate: false
 hide-dossier: true
+hidden: true
 ---
 
 [Optimizely Feature Experimentation](https://www.optimizely.com/products/experiment/feature-experimentation/){:target="_blank"} is a feature flagging and experimentation platform for websites, mobile apps, chatbots, APIs, smart devices and anything else with a network connection.
 
-With their SDK you can deploy code behind feature flags, experiment with A/B tests and use percentage deliveries to roll out or roll back flags immediately.
+With the Optimizely SDK you can deploy code behind feature flags, experiment with A/B tests and use percentage deliveries to roll out or roll back flags immediately.
 
 Segment’s Optimizely Feature Experimentation (Actions) destination supports tracking of conversion events.
 Segment supports one action (event): trackEvent. [TrackEvent](https://docs.developers.optimizely.com/experimentation/v4.0.0-full-stack/docs/track-event-javascript-node){:target="_blank"} sends user conversion events for active experiments. Segment sends data using Optimizely's [Event API](https://docs.developers.optimizely.com/experimentation-data/reference/post_events){:target="_blank"}.
 
-## Implementation Prerequisite
+## Prerequisites
 
 Optimizely works differently than other Segment destinations: it requires that customers implement some Optimizely functionality native to make sure your experiment logic runs correctly.
 
-Segment maps `track` events to Optimizely's `track` method. You must implement all Optimizely decision-based methods, such as `activate` and `isFeatureEnabled`. Segment sends data using Optimizely's[Event API](https://docs.developers.optimizely.com/experimentation-data/reference/post_events){:target="_blank"}.
+Segment maps `track` events to Optimizely's `track` method. You must implement all Optimizely decision-based methods, such as `activate` and `isFeatureEnabled`. Segment sends data using Optimizely's  [Event API](https://docs.developers.optimizely.com/experimentation-data/reference/post_events){:target="_blank"}.
 Segment's API does not include methods that correspond to decision-based methods.
 
 This requires that customers include a native Optimizely implementation before their Segment implementation on pages or in mobile apps where Optimizely experiments run.
@@ -47,9 +48,9 @@ Upon invocation of a Segment `track` event, Segment maps the event to an Optimiz
 * If the current user is activated in a running experiment with the associated `metric`.
 
 Segment also handles the following mapping:
-* Segment `track` event name to Optimizely `eventName`.
-* Segment `track` event `properties` to Optimizely `eventTags`.
-* Segment `track` event `context.traits` to Optimizely `attributes`.
+* Segment maps `track` events to Optimizely `eventName`.
+* Segment maps `track` event, `properties`, to Optimizely `eventTags`.
+* Segment maps `track` event, `context.traits`, to Optimizely `attributes`.
 
 `revenue` values should be passed as a Segment `property`. The value should be an integer and represent the value in cents, so, for example, $1 should be represented by `100`.
 
